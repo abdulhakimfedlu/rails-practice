@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get 'hello/world', to: 'hello#world'
+    get "/products", to: "products#index"
 end
