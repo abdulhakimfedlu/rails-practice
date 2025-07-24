@@ -1,0 +1,21 @@
+<h1>To-Do List</h1>
+
+<%= form_with model: @task, local: true do |form| %>
+  <%= form.text_field :title, placeholder: "Enter a new task" %>
+  <%= form.submit "Add Task" %>
+<% end %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed %>
+        <s><%= task.title %></s>
+      <% else %>
+        <%= task.title %>
+      <% end %>
+
+      <%= button_to "Toggle", task_path(task), method: :patch %>
+      <%= button_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
