@@ -3,7 +3,6 @@ class TasksController < ApplicationController
     @tasks = Task.all
     @task = Task.new
   end
-
   
   def create
     @task = Task.new(task_params)
