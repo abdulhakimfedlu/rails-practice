@@ -1,4 +1,11 @@
 class HelloController < ApplicationController
-def world
+
+  
+  
+  
+  
+  
+  
+  def world
 end
 end
